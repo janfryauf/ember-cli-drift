@@ -1,11 +1,13 @@
 import ENV from '../config/environment';
 
-export function initialize() {
+export function initialize(applicationInstance) {
   const token = ENV.drift && ENV.drift.token;
+  const fastboot = applicationInstance.lookup('service:fastboot');
+  const fastbootEnabled = fastboot && fastboot.get('isEnabled');
 
   var t;
 
-  if(token && !process.env.EMBER_CLI_FASTBOOT) {
+  if(token && !fastbootEnabled) {
     if (t = window.driftt = window.drift = window.driftt || [], !t.init) {
 
       t.methods = [ "identify", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ];
