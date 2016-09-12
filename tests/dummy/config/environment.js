@@ -42,5 +42,9 @@ module.exports = function(environment) {
 
   }
 
+  ENV['drift'] = {
+    token: process.env.DRIFT_TOKEN
+  };
+
   return ENV;
 };
