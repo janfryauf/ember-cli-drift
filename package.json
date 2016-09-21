@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-drift",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Freddie Vargus",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -40,6 +40,10 @@
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.1"
   },
+  "contributors": [{
+    "name": "Alex LaFroscia",
+    "email": "alex@lafroscia.com"
+  }],
   "keywords": [
     "ember-addon"
   ],
