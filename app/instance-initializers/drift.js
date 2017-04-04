@@ -2,6 +2,7 @@ import ENV from '../config/environment';
 
 export function initialize(applicationInstance) {
   const token = ENV.drift && ENV.drift.token;
+  const version = ENV.drift.version;
   const fastboot = applicationInstance.lookup('service:fastboot');
   const fastbootEnabled = fastboot && fastboot.get('isEnabled');
 
@@ -39,7 +40,7 @@ export function initialize(applicationInstance) {
       };
     }
 
-    window.drift.SNIPPET_VERSION = '0.2.0';
+    window.drift.SNIPPET_VERSION = version || '0.3.1';
     window.drift.load(token);
   }
 }
